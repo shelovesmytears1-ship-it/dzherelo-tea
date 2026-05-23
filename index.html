@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ДЖЕРЕЛО — Колекційний чай прямого імпорту та посуд ручної роботи</title>
+  <meta name="description" content="Преміальний китайський чай та витончений посуд в Україні. Лімітовані дикі сбори, витримані пуери, скельні улуни та автентичні гайвані.">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="container navbar-container">
+      <a href="#" class="logo" id="navLogo">ДЖЕРЕЛО</a>
+      
+      <ul class="nav-links">
+        <li><a href="#collection">Чай</a></li>
+        <li><a href="#teaware">Посуд</a></li>
+        <li><a href="#journey">Шлях листа</a></li>
+        <li><a href="#quiz">Тест стану</a></li>
+        <li><a href="#philosophy">Філософія</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Cart Trigger Button -->
+        <button class="cart-trigger" id="cartTrigger" aria-label="Відкрити кошик">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+
+        <!-- Burger Menu Trigger Button -->
+        <button class="burger-menu-btn" id="burgerMenuBtn" aria-label="Відкрити меню">
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Fullscreen Menu -->
+  <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+    <div class="mobile-menu-content">
+      <div class="mobile-menu-header">
+        <span class="logo">ДЖЕРЕЛО</span>
+      </div>
+      <ul class="mobile-nav-links">
+        <li><a href="#collection" class="mobile-nav-link">Колекція чаю</a></li>
+        <li><a href="#teaware" class="mobile-nav-link">Колекція посуду</a></li>
+        <li><a href="#journey" class="mobile-nav-link">Шлях чайної бруньки</a></li>
+        <li><a href="#quiz" class="mobile-nav-link">Підбір чаю за станом</a></li>
+        <li><a href="#philosophy" class="mobile-nav-link">Філософія дзен</a></li>
+        <li><a href="#faq" class="mobile-nav-link">Поширені запитання</a></li>
+      </ul>
+      <div class="mobile-menu-footer">
+        <p class="mobile-menu-quote">«Чай не терпить поспіху. Кожна піала — це повернення до себе»</p>
+        <div class="mobile-menu-contacts">
+          <a href="tel:+380990001122">+380 (99) 000-11-22</a>
+          <a href="https://t.me/dzherelo_tea" target="_blank">Telegram: @dzherelo_tea</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content reveal-el">
+        <span class="hero-subtitle">Premium Tea Import</span>
+        <h1 id="heroTitle">Час<br>уповільнитися.</h1>
+        <p class="hero-desc">Лімітовані партії дикого збору, витримані колекційні пуери та прямий імпорт із прихованих від очей високогірних садів Китаю. Відчуйте спокій у кожній піалі.</p>
+        <div class="hero-cta-wrapper">
+          <a href="#collection" class="btn btn-primary" id="heroCtaBtn">Дослідити колекцію</a>
+        </div>
+      </div>
+      <div class="hero-image-wrapper reveal-el reveal-delay-1">
+        <img src="images/hero.png" alt="Японська чайна церемонія в стилі дзен-минімалізму" id="heroImg">
+      </div>
+    </div>
+  </header>
+
+  <!-- Marquee Banner -->
+  <div class="marquee-section">
+    <div class="marquee-container">
+      <div class="marquee-item">Лімітований дикий збір</div>
+      <div class="marquee-item">Прямий імпорт з Юньнань та Уишань</div>
+      <div class="marquee-item">Висота плантицій до 2200м</div>
+      <div class="marquee-item">Витримані колекційні сорти</div>
+      <div class="marquee-item">Ручний збір першої весняної бруньки</div>
+      <!-- Duplicate for infinite effect -->
+      <div class="marquee-item">Лімітований дикий збір</div>
+      <div class="marquee-item">Прямий імпорт з Юньнань та Уишань</div>
+      <div class="marquee-item">Висота плантацій до 2200м</div>
+      <div class="marquee-item">Витримані колекційні сорти</div>
+      <div class="marquee-item">Ручний збір першої весняної бруньки</div>
+    </div>
+  </div>
+
+  <!-- Founder's Note Section -->
+  <section class="philosophy-section" id="philosophy">
+    <div class="container story-grid">
+      <div class="story-text reveal-el">
+        <span class="section-subtitle">Слово засновника</span>
+        <h2>Від витоків до вашої піали</h2>
+        <p>Ідея бренду ДЖЕРЕЛО народилася під час моєї тривалої подорожі провінцією Юньнань. Спілкуючись із фермерами, які з покоління в покоління доглядають за столітніми чайними деревами, я зрозумів: чай — це не просто гастрономія. Це інструмент для знаходження внутрішнього спокою та балансу.</p>
+        <p>Ми не купуємо чай на масових ринках. Кожен лот, представлений у нашій колекції, відібраний особисто мною безпосередньо у майстрів ферментації. Ми хочемо поділитися цією чистотою, енергією та медитативним станом з кожним українським поціновувачем чаю.</p>
+        <div class="founder-signature">
+          <span class="signature-name">Ярослав Джерело</span>
+          <span class="signature-title">Засновник ДЖЕРЕЛО</span>
+        </div>
+      </div>
+      <div class="story-visual reveal-el reveal-delay-2">
+        <img src="images/hero.png" alt="Процес заварювання чаю майстром" style="object-position: center 30%;">
+      </div>
+    </div>
+  </section>
+
+  <!-- Journey of the Leaf Section -->
+  <section class="journey-section" id="journey">
+    <div class="container">
+      <div class="section-title-wrapper reveal-el">
+        <span class="section-subtitle">Шлях чайної бруньки</span>
+        <h2>Як створюється шедевр</h2>
+        <p class="section-desc">Ми контролюємо кожен крок — від збору ніжних бруньок на туманних вершинах до вашого першого проливу.</p>
+      </div>
+
+      <div class="journey-grid">
+        <div class="journey-step reveal-el">
+          <div class="journey-num">01</div>
+          <h3>Ручний збір у горах</h3>
+          <p>Листя збирають рано-вранці, коли спадає роса, виключно на висоті понад 1500 метрів. Використовуються лише молоді весняні бруньки.</p>
+        </div>
+        <div class="journey-step reveal-el reveal-delay-1">
+          <div class="journey-num">02</div>
+          <h3>Дбайливе в'ялення</h3>
+          <p>Свіже листя тонким шаром розкладають на бамбукових підносах на свіжому повітрі для випаровування надлишкової вологи.</p>
+        </div>
+        <div class="journey-step reveal-el reveal-delay-2">
+          <div class="journey-num">03</div>
+          <h3>Майстерна обробка</h3>
+          <p>Прогрів на дровах, фіксація зелені (Ша Цин) або багаторазове скручування — кожен сорт отримує свій автентичний характер.</p>
+        </div>
+        <div class="journey-step reveal-el reveal-delay-3">
+          <div class="journey-num">04</div>
+          <h3>Правильне заварювання</h3>
+          <p>Чай потрапляє у вашу герметичну порцелянову піалу, де під час церемонії Пин Ча розкриває свої ефірні олії та цілющі стани.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Section (Tea Selection) -->
+  <section class="products-section" id="collection">
+    <div class="container">
+      <div class="section-title-wrapper reveal-el">
+        <span class="section-subtitle">Ексклюзивні чаї</span>
+        <h2>Колекція весняної сесії 2026</h2>
+        <p class="section-desc">Чотири рідкісних сорти чаю вищого гатунку. Ми постачаємо чай у герметичних фарфорових ємностях, які надійно зберігають аромат.</p>
+      </div>
+
+      <div class="products-grid">
+        
+        <!-- Product 1: Sheng Pu-erh -->
+        <div class="product-card reveal-el" data-product-id="sheng_puerh">
+          <div class="product-image">
+            <span class="product-badge">Витриманий</span>
+            <img src="images/sheng_puerh.png" alt="Шен Пуер Дикі Скелі 2012">
+          </div>
+          <div class="product-info">
+            <div class="product-header">
+              <h3 class="product-title">Шен Пуер «Дикі Скелі»</h3>
+              <span class="product-price-label" id="price_sheng_puerh">1 500 ₴</span>
+            </div>
+            <div class="product-meta-list">
+              <div class="product-meta-item">
+                <span class="product-meta-label">Регіон</span>
+                <span class="product-meta-val">Юньнань, Ліньцан</span>
+              </div>
+              <div class="product-meta-item">
+                <span class="product-meta-label">Вік</span>
+                <span class="product-meta-val">Врожай 2012 року (14 років)</span>
+              </div>
+              <div class="product-meta-item">
+                <span class="product-meta-label">Сировина</span>
+                <span class="product-meta-val">Столітні дикі дерева</span>
+              </div>
+              <div class="product-meta-item">
+                <span class="product-meta-label">Смак</span>
+                <span class="product-meta-val">Камфора, сухофрукти, мох</span>
+              </div>
+            </div>
+            <p class="product-desc">Аутентичний шен пуер сухого пресування. Глубокий, щільний настій золотисто-бурштинового кольору з потужним тонізуючим ефектом Ча Ці (енергія чаю).</p>
+            
+            <!-- Weight Selector -->
+            <div class="card-weight-selector">
+              <label class="card-weight-option">
+                <input type="radio" name="weight_sheng_puerh" value="50" checked>
+                <span>50г</span>
+              </label>
+              <label class="card-weight-option">
+                <input type="radio" name="weight_sheng_puerh" value="100">
+                <span>100г</span>
+              </label>
+              <label class="card-weight-option">
+                <input type="radio" name="weight_sheng_puerh" value="250">
+                <span>250г</span>
+              </label>
+            </div>
+
+            <div class="product-cta-wrapper">
+              <button class="btn btn-primary btn-add-to-cart" data-product="sheng_puerh">Додати в кошик</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2: Da Hong Pao -->
+        <div class="product-card reveal-el reveal-delay-1" data-product-id="dahongpao">
+          <div class="product-image">
+            <span class="product-badge">Обмежений лот</span>
+            <img src="images/dahongpao.png" alt="Да Хун Пао Скельний Притулок">
+          </div>
+          <div class="product-info">
+            <div class="product-header">
+              <h3 class="product-title">Да Хун Пао «Скельний Притулок»</h3>
+              <span class="product-price-label" id="price_dahongpao">1 200 ₴</span>
+            </div>
+            <div class="product-meta-list">
+              <div class="product-meta-item">
+                <span class="product-meta-label">Регіон</span>
+                <span class="product-meta-val">Уїшань, пров. Фуцьзянь</span>
+              </div>
+              <div class="product-meta-item">
+                <span class="product-meta-label">Прогрів</span>
+                <span class="product-meta-val">Сильний вогонь (Чжун Хуо)</span>
+              </div>
+              <div class="product-meta-item">
+                <span class="product-meta-label">Збір</span>
+                <span class="product-meta-val">Високогірний скельний, 2025</span>
+              </div>
+              <div class="product-meta-item">
+                <span class="product-meta-label">Смак</span>
+                <span class="product-meta-val">Шоколад, дим, печений горіх</span>
+              </div>
+            </div>
+            <p class="product-desc">Класичний темний улун. Виготовляється за традиційною технологією повільного прогріву на деревному вугіллі, що дає неповторну «скельну мелодію».</p>
+            
+            <!-- Weight Selector -->
+            <div class="card-weight-selector">
+              <label class="card-weight-option">
+                <input type="radio" name="weight_dahongpao" value="50" checked>
+                <span>50г</span>
+              </label>
+              <label class="card-weight-option">
+                <input type="radio" name="weight_dahongpao" value="100">
+                <span>100г</span>
+              </label>
+              <label class="card-weight-option">
+                <input type="radio" name="weight_dahongpao" value="250">
+                <span>250г</span>
+              </label>
+            </div>
+
+            <div class="product-cta-wrapper">
+              <button class="btn btn-primary btn-add-to-cart" data-product="dahongpao">Додати в кошик</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3: Jin Jun Mei -->
+        <div class="product-card reveal-el" data-product-id="jinjunmei">
+          <div class="product-image">
+            <span class="product-badge">Преміум Червоний</span>
+            <img src="images/jinjunmei.png" alt="Цзинь Цзюнь Мей Золоті Брови">
+          </div>
+          <div class="product-info">
+            <div class="product-header">
+              <h3 class="product-title">Цзинь Цзюнь Мей «Золоті Брови»</h3>
+              <span class="product-price-label" id="price_jinjunmei">1 800 ₴</span>
+            </div>
+            <div class="product-meta-list">
+              <div class="product-meta-item">
+                <span class="product-meta-label">Регіон</span>
+                <span class="product-meta-val">Уїшань, заповідник Тунму</span>
+              </div>
+              <div class="product-meta-item">
+                <span class="product-meta-label">Сировина</span>
+                <span class="product-meta-val">Лише ніжні весняні бруньки</span>
+              </div>
+              <div class="product-meta-item">
+                <span class="product-meta-label">Збір</span>
+                <span class="product-meta-val">Квітень 2026 (Свіжий)</span>
+              </div>
+              <div class="product-meta-item">
+                <span class="product-meta-label">Смак</span>
+                <span class="product-meta-val">Квітковий мед, житня скоринка</span>
+              </div>
+            </div>
+            <p class="product-desc">Для створення одного кілограма цього чаю потрібно вручну зібрати близько 100 000 молодих чайних бруньок. Найтонший, оксамитовий медовий профіль.</p>
+            
+            <!-- Weight Selector -->
+            <div class="card-weight-selector">
+              <label class="card-weight-option">
+                <input type="radio" name="weight_jinjunmei" value="50" checked>
+                <span>50г</span>
+              </label>
+              <label class="card-weight-option">
+                <input type="radio" name="weight_jinjunmei" value="100">
+                <span>100г</span>
+              </label>
+              <label class="card-weight-option">
+                <input type="radio" name="weight_jinjunmei" value="250">
+                <span>250г</span>
+              </label>
+            </div>
+
+            <div class="product-cta-wrapper">
+              <button class="btn btn-primary btn-add-to-cart" data-product="jinjunmei">Додати в кошик</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 4: Bai Hao Yin Zhen -->
+        <div class="product-card reveal-el reveal-delay-1" data-product-id="yinzhen">
+          <div class="product-image">
+            <span class="product-badge">Перший збір</span>
+            <img src="images/yinzhen.png" alt="Бай Хао Інь Чжень Срібні Голки">
+          </div>
+          <div class="product-info">
+            <div class="product-header">
+              <h3 class="product-title">Бай Хао Інь Чжень</h3>
+              <span class="product-price-label" id="price_yinzhen">1 600 ₴</span>
+            </div>
+            <div class="product-meta-list">
+              <div class="product-meta-item">
+                <span class="product-meta-label">Регіон</span>
+                <span class="product-meta-val">Фудін, пров. Фуцьзянь</span>
+              </div>
+              <div class="product-meta-item">
+                <span class="product-meta-label">Тип листа</span>
+                <span class="product-meta-val">Бруньки, вкриті срібним ворсом</span>
+              </div>
+              <div class="product-meta-item">
+                <span class="product-meta-label">Збір</span>
+                <span class="product-meta-val">Ранній березень 2026</span>
+              </div>
+              <div class="product-meta-item">
+                <span class="product-meta-label">Смак</span>
+                <span class="product-meta-val">Свіжа трава, диня, березовий сік</span>
+              </div>
+            </div>
+            <p class="product-desc">Еталонний білий чай. Має надзвичайно легкий, освіжаючий смак та тривалий солодкуватий посмак. Містить рекордну кількість антиоксидантів.</p>
+            
+            <!-- Weight Selector -->
+            <div class="card-weight-selector">
+              <label class="card-weight-option">
+                <input type="radio" name="weight_yinzhen" value="50" checked>
+                <span>50г</span>
+              </label>
+              <label class="card-weight-option">
+                <input type="radio" name="weight_yinzhen" value="100">
+                <span>100г</span>
+              </label>
+              <label class="card-weight-option">
+                <input type="radio" name="weight_yinzhen" value="250">
+                <span>250г</span>
+              </label>
+            </div>
+
+            <div class="product-cta-wrapper">
+              <button class="btn btn-primary btn-add-to-cart" data-product="yinzhen">Додати в кошик</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Teaware Collection Section -->
+  <section class="teaware-section" id="teaware">
+    <div class="container">
+      <div class="section-title-wrapper reveal-el">
+        <span class="section-subtitle">Естетика ритуалу</span>
+        <h2>Колекція посуду</h2>
+        <p class="section-desc">Витончені інструменти для чайного дзен. Посуд виготовлений вручну майстрами з Ісіна та Цзіньдечженя з автентичної глини та порцеляни.</p>
+      </div>
+
+      <div class="teaware-grid">
+        
+        <!-- Teaware 1 -->
+        <div class="teaware-card reveal-el">
+          <div class="teaware-image">
+            <img src="images/teaware.png" alt="Глиняний чайник з ісінської глини Дзен" class="teaware-img-teapot">
+          </div>
+          <div class="teaware-info">
+            <h3>Ісінський чайник «Дзен»</h3>
+            <p class="teaware-desc">Автентична фіолетова глина Цзи Ша. Об'єм 120 мл. Ідеально напрацьовується під шу пуери та темні улуни, округлюючи смак.</p>
+            <div class="teaware-footer">
+              <span class="teaware-price">2 400 ₴</span>
+              <button class="btn btn-secondary btn-add-teaware-to-cart" data-product="teaware_teapot">У кошик</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Teaware 2 -->
+        <div class="teaware-card reveal-el reveal-delay-1">
+          <div class="teaware-image">
+            <img src="images/hero.png" alt="Фарфорова Гайвань Біла Хмара" class="teaware-img-gaiwan">
+          </div>
+          <div class="teaware-info">
+            <h3>Гайвань «Біла Хмара»</h3>
+            <p class="teaware-desc">Тонкостінна порцеляна з Цзіньдечженя. Об'єм 110 мл. Чистий білий колір дозволяє спостерігати за справжнім відтінком настою.</p>
+            <div class="teaware-footer">
+              <span class="teaware-price">1 100 ₴</span>
+              <button class="btn btn-secondary btn-add-teaware-to-cart" data-product="teaware_gaiwan">У кошик</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Teaware 3 -->
+        <div class="teaware-card reveal-el reveal-delay-2">
+          <div class="teaware-image">
+            <img src="images/teaware.png" alt="Набір піал з дров'яного випалу" class="teaware-img-cups">
+          </div>
+          <div class="teaware-info">
+            <h3>Набір піал «Дров'яний випал»</h3>
+            <p class="teaware-desc">Дві піали по 45 мл. Унікальна градієнтна текстура золи від випалу в печі. Кожна піала має неповторний малюнок поверхні.</p>
+            <div class="teaware-footer">
+              <span class="teaware-price">850 ₴</span>
+              <button class="btn btn-secondary btn-add-teaware-to-cart" data-product="teaware_cups">У кошик</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Tea Quiz Section -->
+  <section class="quiz-section" id="quiz">
+    <div class="container">
+      <div class="quiz-card reveal-el">
+        <div class="quiz-intro" id="quizIntro">
+          <span class="section-subtitle">Чайний навігатор</span>
+          <h2>Який стан ви шукаєте сьогодні?</h2>
+          <p>Оберіть внутрішнє прагнення, і ми підберемо ідеальний сорт чаю, що резонує з вашим настроєм.</p>
+          <div class="quiz-options">
+            
+            <button class="quiz-option-btn" data-state="energy">
+              <span class="quiz-option-icon">
+                <svg class="quiz-option-svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                </svg>
+              </span>
+              <span class="quiz-option-title">Енергія та фокус</span>
+              <span class="quiz-option-desc">Потрібно налаштуватися на роботу та активність</span>
+            </button>
+
+            <button class="quiz-option-btn" data-state="calm">
+              <span class="quiz-option-icon">
+                <svg class="quiz-option-svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 3.5 0 9.2a7 7 0 0 1-8 8.8z"></path>
+                  <path d="M19 2c-2.26 4.33-5.27 7.14-8 8"></path>
+                </svg>
+              </span>
+              <span class="quiz-option-title">Медитація та спокій</span>
+              <span class="quiz-option-desc">Уповільнити потік думок та знайти тишу всередині</span>
+            </button>
+
+            <button class="quiz-option-btn" data-state="contemplation">
+              <span class="quiz-option-icon">
+                <svg class="quiz-option-svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+              </span>
+              <span class="quiz-option-title">Глибокі роздуми</span>
+              <span class="quiz-option-desc">Для неспішної бесіди або вечірнього споглядання</span>
+            </button>
+
+          </div>
+        </div>
+
+        <div class="quiz-result" id="quizResult" style="display: none;">
+          <div class="quiz-result-grid">
+            <div class="quiz-result-image">
+              <img src="" alt="" id="quizResultImg">
+            </div>
+            <div class="quiz-result-content">
+              <span class="section-subtitle">Ваш ідеальний супутник</span>
+              <h3 id="quizResultTitle"></h3>
+              <p id="quizResultDesc" class="quiz-result-desc"></p>
+              <div class="quiz-recommendation-details">
+                <span class="recommendation-badge" id="quizResultState"></span>
+              </div>
+              <div class="quiz-result-actions">
+                <button class="btn btn-primary" id="quizAddToCartBtn">Додати до кошика (50г)</button>
+                <button class="btn btn-secondary" id="quizResetBtn">Пройти знову</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ritual Guide Section -->
+  <section class="ritual-section ritual-bg" id="ritual">
+    <div class="container">
+      <div class="section-title-wrapper reveal-el">
+        <span class="section-subtitle">Чайне мистецтво</span>
+        <h2>Як правильно заварювати методом проливів</h2>
+        <p class="section-desc">Розкрийте повний потенціал чаю вищого гатунку за допомогою традиційного методу Пин Ча.</p>
+      </div>
+
+      <div class="ritual-grid">
+        <div class="ritual-steps reveal-el">
+          
+          <div class="ritual-step">
+            <div class="ritual-num">01</div>
+            <div class="ritual-content">
+              <h3>Температура та якість води</h3>
+              <p>Використовуйте м'яку воду низької мінералізації. Білий чай заварюйте при 80-85°C, улуни — 90°C, а пуери потребують окропу (95-98°C).</p>
+            </div>
+          </div>
+
+          <div class="ritual-step">
+            <div class="ritual-num">02</div>
+            <div class="ritual-content">
+              <h3>Прогрів посуду та «пробудження»</h3>
+              <p>Ополосніть гайвань або ісінський чайник гарячою водою. Засипте сухе листя, накрийте кришкою і зачекайте 10 секунд — тепло стінок розкриє перші ноти аромату.</p>
+            </div>
+          </div>
+
+          <div class="ritual-step">
+            <div class="ritual-num">03</div>
+            <div class="ritual-content">
+              <h3>Миттєві проливи</h3>
+              <p>Перший пролив злийте — він промиває лист. Наступні настоюйте всього 5–15 секунд. Кожен наступний пролив збільшуйте на 3-5 секунд. Наш чай витримує до 8-12 заварювань.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="ritual-info-card reveal-el reveal-delay-2">
+          <h4>Рекомендація майстра</h4>
+          <p style="margin-bottom: var(--space-sm);">«Преміальний чай не любить спеки та великих чашок. Метод Пин Ча у невеликому посуді на 100-150 мл дозволяє зберегти ефірні олії та спостерігати еволюцію смаку. Чай розкриває свої грані поступово, даруючи спокійний та ясний стан розуму».</p>
+          <p style="font-style: italic; color: var(--muted); font-size: var(--text-sm);">— Ярослав Джерело, чаєзнавець</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews Section (Social Proof) -->
+  <section class="reviews-section">
+    <div class="container">
+      <div class="section-title-wrapper reveal-el">
+        <span class="section-subtitle">Враження</span>
+        <h2>Відгуки поціновувачів</h2>
+        <p class="section-desc">Досвід людей, які вже долучилися до чайної культури разом із ДЖЕРЕЛО.</p>
+      </div>
+
+      <div class="reviews-grid">
+        <div class="review-card reveal-el">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">«Шен Пуер "Дикі Скелі" — це щось неймовірне. Чіткий камфорний аромат, потужний стан бадьорості. Настій тримає до 10 проливів без жодної гіркоти. Обслуговування на висоті, упаковано в порцелянову баночку!»</p>
+          <div class="review-author">
+            <span class="author-name">Олег М.</span>
+            <span class="author-meta">Київ · Купував Шен Пуер</span>
+          </div>
+        </div>
+
+        <div class="review-card reveal-el reveal-delay-1">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">«Придбала тут порцелянову гайвань і білий чай Бай Хао Інь Чжень. Смак чаю дуже ніжний, квітково-солодкий. Посуд просто не хочеться випускати з рук, неймовірна естетика мінімалізму та дзену.»</p>
+          <div class="review-author">
+            <span class="author-name">Марія К.</span>
+            <span class="author-meta">Львів · Купувала чай та посуд</span>
+          </div>
+        </div>
+
+        <div class="review-card reveal-el reveal-delay-2">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">«Да Хун Пао дійсно прогрітий на вугіллі, як у найкращих чайних домах Китаю. Хлібні та шоколадні тони розкриваються поступово. Дуже рекомендую спробувати метод Пин Ча з їхніми піалами.»</p>
+          <div class="review-author">
+            <span class="author-name">Андрій В.</span>
+            <span class="author-meta">Одеса · Купував Да Хун Пао</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section (Accordion) -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <div class="section-title-wrapper reveal-el">
+        <span class="section-subtitle">FAQ</span>
+        <h2>Поширені запитання</h2>
+        <p class="section-desc">Все, що потрібно знати про оплату, доставку та зберігання нашого преміального чаю.</p>
+      </div>
+
+      <div class="faq-list reveal-el">
+        
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" id="faq_q1">
+            <span>Як здійснюється доставка по Україні?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Ми відправляємо замовлення щодня за допомогою «Нової Пошти» (у відділення, поштомат або кур'єром) та «Укрпошти». Зазвичай доставка займає 1–2 робочих дні. Для замовлень від 2000 ₴ доставка безкоштовна.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" id="faq_q2">
+            <span>Чому цей чай коштує дорожче, ніж у звичайних супермаркетах?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Наш чай — це фермерський продукт Single Estate (з конкретного саду), зібраний вручну зі старих дерев на великій висоті. Він виготовляється лімітованими партіями чайними майстрами. Звичайний чай у супермаркетах — це промисловий купаж низької якості машинної збірки.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" id="faq_q3">
+            <span>Як правильно зберігати чай у домашніх умовах?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Чай потрібно зберігати у герметичній ємності (наш чай поставляється саме в таких баночках) у сухому темному місці без сторонніх запахів. Зелені та білі чаї краще зберігати у прохолоді, а пуери та улуни — при кімнатній температурі.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" id="faq_q4">
+            <span>Чи є у вас шоурум або самовивіз?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Наразі мы працюємо як інтернет-магазин із власною чайною студією в Києві (вул. Кожум'яцька, 12б). Ви можете замовити безкоштовний самовивіз або завітати до нас за попереднім записом на чайну сесію-дегустацію.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Pre-Footer Banner (Newsletter) -->
+  <section class="subscription-section">
+    <div class="container reveal-el" style="text-align: center; max-width: 700px; display: flex; flex-direction: column; gap: var(--space-md); align-items: center;">
+      <span class="section-subtitle">Клуб поціновувачів</span>
+      <h2>Приєднатися до чайної спільноти ДЖЕРЕЛО</h2>
+      <p style="opacity: 0.8;">Раз на місяць ми привозимо унікальні мікро-лоти поза каталогом. Залиште свій email, щоб першими отримувати запрошення на закриті поставки та дегустації.</p>
+      
+      <form id="subscribeForm" style="display: flex; gap: var(--space-sm); width: 100%; max-width: 500px; margin-top: var(--space-sm);" onsubmit="event.preventDefault(); alert('Дякуємо! Надішлемо вам запрошення під час наступного закритого збору.'); this.reset();">
+        <input type="email" placeholder="Ваш Email" class="input-text" style="flex-grow: 1;" required id="subscribeEmail">
+        <button type="submit" class="btn btn-primary" id="subscribeSubmitBtn">Вступити</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <span class="logo" style="margin-bottom: var(--space-sm);">ДЖЕРЕЛО</span>
+          <p style="font-size: var(--text-sm); color: var(--muted); max-width: 280px;">Ваш провідник у світ екологічного чаю преміальної якості та естетичного посуду.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Розділи</h4>
+          <ul class="footer-links">
+            <li><a href="#collection">Асортимент чаю</a></li>
+            <li><a href="#teaware">Колекція посуду</a></li>
+            <li><a href="#journey">Процес виготовлення</a></li>
+            <li><a href="#quiz">Тест стану</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Контакти</h4>
+          <ul class="footer-links">
+            <li>Telegram: @dzherelo_tea</li>
+            <li>Телефон: +380 (99) 000-11-22</li>
+            <li>Чайна Студія: Київ, вул. Кожум'яцька, 12б</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 ДЖЕРЕЛО PREMIUM TEA. Всі права захищено.</p>
+        <p>Дизайн та розробка: overflow</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Shopping Cart Drawer (Sidebar) -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-drawer-header">
+      <h3>Ваш Кошик</h3>
+      <button class="cart-drawer-close" id="cartDrawerClose" aria-label="Закрити кошик">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Cart items list container -->
+    <div class="cart-drawer-body">
+      
+      <!-- Empty cart message -->
+      <div class="cart-empty-message" id="cartEmptyMessage">
+        <p>У кошику поки немає товарів.</p>
+        <a href="#collection" class="btn btn-secondary" style="margin-top: var(--space-sm);" id="cartEmptyBtn">Перейти до колекції</a>
+      </div>
+
+      <!-- Active Cart Items -->
+      <div class="cart-items-list" id="cartItemsList"></div>
+
+      <!-- Checkout Form Panel (Visible when cart has items) -->
+      <div class="checkout-panel" id="checkoutPanel" style="display: none;">
+        <hr class="checkout-divider">
+        <h4>Оформлення замовлення</h4>
+        
+        <form id="checkoutForm">
+          <div class="form-group">
+            <label for="checkoutName" class="form-label">Ваше Ім'я</label>
+            <input type="text" id="checkoutName" class="input-text" placeholder="Олександр" required>
+          </div>
+
+          <div class="form-group">
+            <label for="checkoutPhone" class="form-label">Телефон або Telegram</label>
+            <input type="text" id="checkoutPhone" class="input-text" placeholder="+380 (99) 000-00-00 або @username" required>
+          </div>
+
+          <div class="form-group">
+            <label for="checkoutDelivery" class="form-label">Спосіб доставки</label>
+            <select id="checkoutDelivery" class="input-text" required style="width: 100%; appearance: none; background-image: url('data:image/svg+xml;utf8,<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;%237E827B&quot; stroke-width=&quot;1.5&quot;><polyline points=&quot;6 9 12 15 18 9&quot;></polyline></svg>'); background-repeat: no-repeat; background-position: right 14px center; background-size: 16px;">
+              <option value="nova_poshta_office">Нова Пошта (Відділення)</option>
+              <option value="nova_poshta_postbox">Нова Пошта (Поштомат)</option>
+              <option value="ukrposhta">Укрпошта (Доставка по Україні)</option>
+              <option value="self_pickup">Самовивіз з студії (Київ)</option>
+            </select>
+          </div>
+
+          <div class="form-group" id="deliveryAddressGroup">
+            <label for="checkoutAddress" class="form-label">Місто та номер відділення / Адреса</label>
+            <input type="text" id="checkoutAddress" class="input-text" placeholder="Київ, відділення №15" required>
+          </div>
+
+          <div class="form-group">
+            <label for="checkoutPayment" class="form-label">Оплата</label>
+            <select id="checkoutPayment" class="input-text" required style="width: 100%; appearance: none; background-image: url('data:image/svg+xml;utf8,<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;%237E827B&quot; stroke-width=&quot;1.5&quot;><polyline points=&quot;6 9 12 15 18 9&quot;></polyline></svg>'); background-repeat: no-repeat; background-position: right 14px center; background-size: 16px;">
+              <option value="monobank">Картка / Monobank (WayForPay)</option>
+              <option value="apple_pay">Apple Pay / Google Pay</option>
+              <option value="cod">Післяплата (при отриманні на пошті)</option>
+            </select>
+          </div>
+
+          <div class="cart-total-summary">
+            <span>Сума замовлення:</span>
+            <span class="cart-total-value" id="cartTotalVal">0 ₴</span>
+          </div>
+
+          <button type="submit" class="btn btn-primary checkout-submit-btn" id="checkoutSubmitBtn">Підтвердити замовлення</button>
+        </form>
+      </div>
+
+      <!-- Checkout Success Screen -->
+      <div class="checkout-success" id="checkoutSuccess" style="display: none;">
+        <div class="checkout-success-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+        </div>
+        <h3>Замовлення прийнято!</h3>
+        <p id="checkoutSuccessDetails" style="color: var(--muted); font-size: var(--text-sm); line-height: 1.6; text-align: center; max-width: 320px;"></p>
+        <button type="button" class="btn btn-secondary" style="margin-top: var(--space-md); width: 100%;" id="checkoutSuccessCloseBtn">Повернутися на сайт</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Main JavaScript File -->
+  <script src="app.js"></script>
+</body>
+</html>

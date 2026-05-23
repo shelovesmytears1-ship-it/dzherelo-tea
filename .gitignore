@@ -1,0 +1,8 @@
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.idea/
+
+# Internal studio-system docs (not for public repo)
+studio-system/
