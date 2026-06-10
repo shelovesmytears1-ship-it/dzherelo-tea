@@ -1572,6 +1572,13 @@ section {
   align-items: center;
   font-size: var(--text-xs);
   color: var(--muted);
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+}
+.footer-concept {
+  width: 100%;
+  opacity: 0.55;
+  font-size: 0.72rem;
 }
 
 @media (max-width: 576px) {
