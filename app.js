@@ -7,7 +7,7 @@ const productsDb = {
     id: "sheng_puerh",
     title: "Шен Пуер «Дикі Скелі»",
     category: "Витриманий пуер",
-    image: "images/sheng_puerh.png",
+    image: "images/sheng_puerh.webp",
     pricing: {
       "50": 1500,
       "100": 2700,
@@ -18,7 +18,7 @@ const productsDb = {
     id: "dahongpao",
     title: "Да Хун Пао «Скельний Притулок»",
     category: "Скельний улун",
-    image: "images/dahongpao.png",
+    image: "images/dahongpao.webp",
     pricing: {
       "50": 1200,
       "100": 2100,
@@ -29,7 +29,7 @@ const productsDb = {
     id: "jinjunmei",
     title: "Цзинь Цзюнь Мей «Золоті Брови»",
     category: "Елітний червоний чай",
-    image: "images/jinjunmei.png",
+    image: "images/jinjunmei.webp",
     pricing: {
       "50": 1800,
       "100": 3200,
@@ -40,7 +40,7 @@ const productsDb = {
     id: "yinzhen",
     title: "Бай Хао Інь Чжень",
     category: "Білий чай першого збору",
-    image: "images/yinzhen.png",
+    image: "images/yinzhen.webp",
     pricing: {
       "50": 1600,
       "100": 2900,
@@ -52,21 +52,21 @@ const productsDb = {
     id: "teaware_teapot",
     title: "Ісінський чайник «Дзен»",
     category: "Посуд",
-    image: "images/teaware.png",
+    image: "images/teaware.webp",
     price: 2400
   },
   teaware_gaiwan: {
     id: "teaware_gaiwan",
     title: "Гайвань «Біла Хмара»",
     category: "Посуд",
-    image: "images/hero.png",
+    image: "images/hero.webp",
     price: 1100
   },
   teaware_cups: {
     id: "teaware_cups",
     title: "Набір піал «Дров'яний випал»",
     category: "Посуд",
-    image: "images/teaware.png",
+    image: "images/teaware.webp",
     price: 850
   }
 };
@@ -271,6 +271,7 @@ const mobileOverlay = document.getElementById("mobileMenuOverlay");
 function toggleMobileMenu() {
   burgerBtn.classList.toggle("active");
   mobileOverlay.classList.toggle("active");
+  burgerBtn.setAttribute("aria-expanded", String(mobileOverlay.classList.contains("active")));
   
   if (mobileOverlay.classList.contains("active")) {
     document.body.style.overflow = "hidden";
@@ -282,6 +283,7 @@ function toggleMobileMenu() {
 function closeMobileMenu() {
   burgerBtn.classList.remove("active");
   mobileOverlay.classList.remove("active");
+  burgerBtn.setAttribute("aria-expanded", "false");
   document.body.style.overflow = "";
 }
 
@@ -302,21 +304,21 @@ const quizRecommendations = {
     productId: "sheng_puerh",
     stateLabel: "Енергія та фокус",
     title: "Шен Пуер «Дикі Скелі»",
-    image: "images/sheng_puerh.png",
+    image: "images/sheng_puerh.webp",
     desc: "Чудовий вибір для активації внутрішніх ресурсів. Цей витриманий пуер дарує тривалий тонізуючий ефект, прояснює думки та налаштовує на продуктивну роботу. Має приємний камфорно-моховий профіль із солодкуватим післясмаком."
   },
   calm: {
     productId: "yinzhen",
     stateLabel: "Медитація та спокій",
     title: "Бай Хао Інь Чжень",
-    image: "images/yinzhen.png",
+    image: "images/yinzhen.webp",
     desc: "Ідеальний супутник для сповільнення та глибокого розслаблення. Найніжніший білий чай містить багато L-теаніну, який знижує рівень стресу, дарує спокій та легкість. Свіжий аромат польових трав та дині."
   },
   contemplation: {
     productId: "dahongpao",
     stateLabel: "Глибокі роздуми",
     title: "Да Хун Пао «Скельний Притулок»",
-    image: "images/dahongpao.png",
+    image: "images/dahongpao.webp",
     desc: "Для моментів споглядання, читання або затишних розмов. Багатий скельний аромат диму, шоколаду та горіхів допомагає відволіктися від повсякденної метушні та зануритися у глибину своїх відчуттів."
   }
 };
